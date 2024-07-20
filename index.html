@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCKAP PALLI Inventory Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="inventoryDckapPalli">
+        <div class="inventoryMain">
+            <div class="inventoryHeader">
+                <h1 class="inventoryHeaderHeading"><span><i class="fa-solid fa-clipboard-check"></i></span> <span>DCKAP Palli Inventory</span></h1>
+            </div>
+            <div class="inventoryDashBoard">
+                <div class="inventoryDashBoardHeading">
+                    <h3>Dashboard </h3>
+                </div>
+                <div class="inventoryDashBoardContent">
+                    <div class="inventoryDashBoardContentProduct">
+                        <h3>Product 1</h3>
+                        <h3 class="inventoryDashBoardContentProductQuantity">0</h3>
+                    </div>
+                    <div class="inventoryDashBoardContentProduct">
+                        <h3>Product 2</h3>
+                        <h3 class="inventoryDashBoardContentProductQuantity">0</h3>
+                    </div>
+                    <div class="inventoryDashBoardContentProduct">
+                        <h3>Product 3</h3>
+                        <h3 class="inventoryDashBoardContentProductQuantity">0</h3>
+                    </div>
+                </div>
+                <div class="inventoryProductUpdationButtons">
+                    <button id="add-product-btn" class="inventoryProductUpdationAddBtn">Add Product</button>
+                    <button id="update-inventory-btn" class="inventoryProductUpdationUpdateBtn">Update Inventory</button>
+                </div>
+                <div class="inventoryBarChart">
+                    <canvas id="inventoryChart"></canvas>
+                </div>
+                <div class="inventoryRecipientsTable">
+                    <h3>Recipient Details</h3>
+                    <table id="recipients-table">
+                        <thead>
+                            <tr>
+                                <th>Recipient</th>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <form id="form">
+                <label for="recipient-name" class="recipient-field">Recipient Name:</label>
+                <input type="text" id="recipient-name" class="recipient-field">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required>
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
