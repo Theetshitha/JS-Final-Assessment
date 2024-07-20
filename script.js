@@ -75,7 +75,7 @@ class InventoryManagement {
                 datasets: [{
                     backgroundColor: barColors,
                     data: data,
-                    borderWidth: 1 // Optional: add border to the bars for better visibility
+                    borderWidth: 1 
                 }]
             },
             options: {
@@ -87,8 +87,7 @@ class InventoryManagement {
                     y: {
                         beginAtZero: true,
                         ticks: {
-                            stepSize: 50 // Optional: adjust step size for y-axis
-                        }
+                            stepSize: 50                         }
                     }
                 }
             }
